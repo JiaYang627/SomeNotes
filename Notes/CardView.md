@@ -188,4 +188,5 @@ Java代码中：
 此处设置了3个SeekBar分别设置CardView的 圆角半径：mCardView.setRadius，阴影半径：mCardView.setCardElevation，内部子父控件的距离：mCardView.setContentPadding。
 
 
-具体Demo:[](https://github.com/JiaYang627/GitHubNotesDemo)
+具体Demo:
+* [GitHubNotesDemo](https://github.com/JiaYang627/GitHubNotesDemo)
