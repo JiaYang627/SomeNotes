@@ -68,37 +68,3 @@
 具有此标记位的Act，不会出现在历史Act列表中，当某些情况下我们不希望用户通过历史列表回到我们Act的时候，此标记会很好用。它等同于在XML文件中指定Act的属性"android:excludeFromRecents = "true" "。
 ```
 
-## 具体情况：
-
-* 项目中我们会做单点登录(多端登录)机制，举例说明：我们在BaseActivity中对后台返回code值做判断，假设404的时候判断为授权失效，此时跳转登录LoginActivity。
-
-```
-        if (code == 200) {
-            return true;
-        } else if (code == 404) {
-
-            Intent intent = new Intent(context, LoginActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            context.startActivity(intent);
-
-            ToastUtils.initToast(msg);
-            return false;
-        } else {
-            ToastUtils.initToast(msg);
-            return false;
-
-        }
-```
-
-
-```
-上面代码中使用的是 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)和addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)，此时会重新开一个Task并写开启的Act具有singleTask属性。
-```
-* 项目中做推送的时候，一般会有通过推送回来的消息点击跳转页面，一般我们都在项目的入口Application中做推送的广播接收器，通过类型做具体跳转，此时我们开启Act的时候一般都是:
-
-```
-setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-```
-此时是在同一个栈中开启一个Act，开启模式设置为singleTask。
