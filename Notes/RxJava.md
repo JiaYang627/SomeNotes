@@ -2,7 +2,7 @@
 
 > RxJava是ReactiveX的一种Java实现。ReactiveX是Reactive Extensions的缩写，一般简写为Rx。开发者可以用Observables表示异步数据流，用LINQ操作符查询异步数据流，用Schedulers参数化异步数据流的并发处理，Rx可以这样定义：Rx = Observables + LINQ + Schedulers。
 
-* 我为什么要选择RxJava ？
+* 或许你会问：我为什么要选择RxJava ？
 
 ```
 一般我们在开发的时候，只要说到异步操作，就会想到Android的AsyncTask和Handler。但是随着请求的数量越来越多，
