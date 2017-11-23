@@ -408,7 +408,7 @@ Observable.create(new Observable.OnSubscribe<Integer>() {
           });
 ```
 
-如上所示，Observable中走了一个for循环，当i为1时走onNext，当i为1时让走onError，然后，此时会重新订阅，再次走for循环，此为第一次重新订阅。在第二次重新订阅的时候，走到onError后不会再次重新订阅，运行代码查看Log：
+如上所示，Observable中走了一个for循环，当i为0时走onNext，当i为1时让走onError，然后，此时会重新订阅，再次走for循环，此为第一次重新订阅。在第二次重新订阅的时候，走到onError后不会再次重新订阅，运行代码查看Log：
 
 ```
 E/RxJavaActivity: onNext:0
