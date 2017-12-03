@@ -11,3 +11,5 @@
 [《RxJava》](https://github.com/JiaYang627/SomeNotes/blob/master/Notes/RxJava.md)
 
 [《ViewPager》](https://github.com/JiaYang627/SomeNotes/blob/master/Notes/ViewPager.md)
+
+[《Android的消息机制》](https://github.com/JiaYang627/SomeNotes/blob/master/Notes/Android的消息机制.md)
